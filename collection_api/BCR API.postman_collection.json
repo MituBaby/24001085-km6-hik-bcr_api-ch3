@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "8d9f4cd2-4007-4f98-8109-9c8fbfc4bfde",
+		"name": "BCR API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33567775"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/CARS WITH QUERY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cars?manufacture=nissan",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					],
+					"query": [
+						{
+							"key": "manufacture",
+							"value": "nissan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/CARS BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cars/32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD CARS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plate\": \"NHI-3883\",\r\n    \"manufacture\": \"Nissan\",\r\n    \"model\": \"R34\",\r\n    \"image\": \"./images/car24.min.jpg\",\r\n    \"rentPerDay\": 15000000,\r\n    \"capacity\": 2,\r\n    \"description\": \" 200mm front axle. Roof mounted antenna. Cargo compartment cover. Rear bench seat -inc: (3) adjustable headrests.\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Manual\",\r\n    \"available\": \"false\",\r\n    \"type\": \"Sedan\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n      \"Moonroof/Sunroof\",\r\n      \"Power Seats\",\r\n      \"CD (Single Disc)\",\r\n      \"Airbag: Passenger\",\r\n      \"Alarm\",\r\n      \"Power Seats\",\r\n      \"Cruise Control\"\r\n    ],\r\n    \"specs\": [\r\n      \"200mm front axle\",\r\n      \"Roof mounted antenna\",\r\n      \"Cargo compartment cover\",\r\n      \"Rear bench seat -inc: (3) adjustable headrests\",\r\n      \"Front/rear aluminum multi-link double joint suspension w/coil springs\",\r\n      \"Reclining front bucket seats -inc: active head restraints, double-thickness foam in front seats\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cars",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CARS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plate\": \"NHI-3883\",\r\n    \"manufacture\": \"Nissan\",\r\n    \"model\": \"R34\",\r\n    \"image\": \"./images/car24.min.jpg\",\r\n    \"rentPerDay\": 15000000,\r\n    \"capacity\": 2,\r\n    \"description\": \" 200mm front axle. Roof mounted antenna. Cargo compartment cover. Rear bench seat -inc: (3) adjustable headrests.\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Manual\",\r\n    \"available\": \"false\",\r\n    \"type\": \"Sedan\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n      \"Moonroof/Sunroof\",\r\n      \"Power Seats\",\r\n      \"CD (Single Disc)\",\r\n      \"Airbag: Passenger\",\r\n      \"Alarm\",\r\n      \"Power Seats\",\r\n      \"Cruise Control\"\r\n    ],\r\n    \"specs\": [\r\n      \"200mm front axle\",\r\n      \"Roof mounted antenna\",\r\n      \"Cargo compartment cover\",\r\n      \"Rear bench seat -inc: (3) adjustable headrests\",\r\n      \"Front/rear aluminum multi-link double joint suspension w/coil springs\",\r\n      \"Reclining front bucket seats -inc: active head restraints, double-thickness foam in front seats\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cars/32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CARS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cars/32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

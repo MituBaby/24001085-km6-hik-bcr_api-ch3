@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Binar Car rental</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- start navigation -->
+    <div class="navigation" id="navigation">
+      <div class="logo" id="logo" onclick="redirectToHome()"></div>
+      <div class="navbar" id="navbar">
+        <h5>
+          <a href="#Hero" id="BCR">BCR</a>
+        </h5>
+        <h5>
+          <a href="./index.html#Our-Service" id="OurService">Our Services</a>
+        </h5>
+        <h5>
+          <a href="./index.html#Why-Us" id="WhyUs">Why Us</a>
+        </h5>
+        <h5>
+          <a href="./index.html#Testimonial" id="Testi">Testimonial</a>
+        </h5>
+        <h5>
+          <a href="./index.html#FAQ" id="FAQQ">FAQ</a>
+        </h5>
+        <button id="btn" class="btn">Register</button>
+      </div>
+      <div class="btn-nav" id="btn-nav">
+        <img src="./images/align-justify.svg" alt="" />
+      </div>
+      <div class="btn-close-nav" id="btn-close-nav">
+        <img src="./images/x.svg" alt="" />
+      </div>
+    </div>
+    <!-- end navigation -->
+
+    <!-- start hero section -->
+    <div class="hero" id="Hero">
+      <div class="section1">
+        <p class="sewa">Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</p>
+        <p class="desc-rental">
+          Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas
+          terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
+          untuk sewa mobil selama 24 jam.
+        </p>
+        <button id="btn-sewa" class="btn">Mulai Sewa Mobil</button>
+      </div>
+      <div class="section2">
+        <img src="./images/img_car.png" alt="Mobil" class="car-img" />
+      </div>
+    </div>
+    <!-- end hero section -->
+
+    <!-- start search section -->
+    <div class="search">
+      <form>
+        <div class="row g-2 mx-auto">
+          <div class="col-md-3">
+            <p>Tipe Driver</p>
+            <select class="form-select" id="validationDefault04" required>
+              <option selected disabled value="">Pilih Tipe Driver</option>
+              <option value="1">Dengan Sopir</option>
+              <option value="2">Tanpa Sopir</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <p>Tanggal</p>
+            <!-- <input type="date" id="tanggal" required /> -->
+            <input
+              type="date"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder="Jumlah Penumpang"
+              id="tanggal"
+              required
+            />
+          </div>
+          <div class="col-md-3">
+            <p>Waktu Jemput/Ambil</p>
+            <div class="input-group mb-3">
+              <input
+                type="time"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="Jumlah Penumpang"
+                id="time"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <p>Jumlah Penumpang</p>
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="Jumlah Penumpang"
+                id="jumlahPenumpang"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-1 mt-5">
+            <button class="btn btn-success" type="submit" id="btn-submit">
+              Cari Mobil
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- end search section -->
+
+    <!-- start card mobil -->
+    <div id="cars-container">
+      <div class="row g-5 mx-auto" id="card-cars"></div>
+    </div>
+    <!-- end card mobil -->
+
+    <!-- start footer section -->
+    <div class="footer mx-auto">
+      <div class="address">
+        <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+        <p>binarcarrental@gmail.com</p>
+        <p>081-233-334-808</p>
+      </div>
+      <div class="naf">
+        <p>
+          <a href="/#Our-Service">Our Services</a>
+        </p>
+        <p>
+          <a href="/#Why-Us">Why Us</a>
+        </p>
+        <p>
+          <a href="/#Testimonial">Testimonial</a>
+        </p>
+        <p>
+          <a href="/#FAQ">FAQ</a>
+        </p>
+      </div>
+      <div class="sosmed">
+        <p>Connect with us</p>
+        <div class="icon-sosmed">
+          <span>
+            <img src="./images/icon_facebook.png" alt="" />
+          </span>
+          <span>
+            <img src="./images/icon_instagram.png" alt="" />
+          </span>
+          <span>
+            <img src="./images/icon_twitter.png" alt="" />
+          </span>
+          <span>
+            <img src="./images/icon_mail.png" alt="" />
+          </span>
+          <span>
+            <img src="./images/icon_twitch.png" alt="" />
+          </span>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright Binar 2022</p>
+        <div class="logo" id="logo" onclick="redirectToHome()"></div>
+      </div>
+    </div>
+    <!-- end footer section -->
+
+    <div style="display: none">
+      <button id="load-btn">Load</button>
+      <button id="clear-btn">Clear</button>
+      <div id="cars-container"></div>
+    </div>
+
+    <!-- Example Javascript -->
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.example.js"></script>
+    <script type="text/javascript" src="./scripts/car.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/script.js"></script>
+    <script>
+      // Mendapatkan elemen input tanggal
+      var inputTanggal = document.getElementById("tanggal");
+
+      // Mendapatkan tanggal hari ini dalam format YYYY-MM-DD
+      var today = new Date().toISOString().split("T")[0];
+
+      // Mengatur atribut min pada input tanggal ke tanggal hari ini
+      inputTanggal.setAttribute("min", today);
+    </script>
+  </body>
+</html>

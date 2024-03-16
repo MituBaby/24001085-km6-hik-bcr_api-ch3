@@ -1,0 +1,472 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 130px 0 200px;
+  background-color: #f1f3ff;
+}
+
+.logo {
+  width: 100px;
+  height: 34px;
+  background-color: #0d28a6;
+  cursor: pointer;
+}
+
+.navbar {
+  gap: 50px;
+}
+
+#BCR {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  border-bottom: 2px solid darkslategray;
+}
+
+#btn {
+  background-color: #5cb85f;
+  color: white;
+  font-weight: 700;
+  border-radius: 0;
+}
+
+.btn-nav {
+  display: none;
+}
+
+.btn-close-nav {
+  display: none;
+}
+
+.hero {
+  width: 100%;
+  height: fit-content;
+  background-color: #f1f3ff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 200px;
+}
+
+.sewa {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.desc-rental {
+  width: 468px;
+  height: 60px;
+}
+
+#btn-sewa {
+  width: fit-content;
+  background-color: #5cb85f;
+  color: white;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+.section2 {
+  width: 70%;
+}
+.car-img {
+  width: 100%;
+}
+
+.our-service {
+  display: flex;
+  padding-left: 200px;
+  margin-bottom: 50px;
+}
+
+.img-service {
+  width: 41%;
+}
+
+.desc-service {
+  width: 50%;
+}
+
+.desc-service h3 {
+  font-weight: bold;
+}
+
+.why-us {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+h6 {
+  font-weight: bold;
+}
+
+.row h2 {
+  font-weight: bold;
+}
+
+.head-testi {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.carousel {
+  scale: 0.6;
+}
+
+.card-slider {
+  width: 1000px;
+  height: 200px;
+  background-color: #f1f3ff;
+}
+
+.testimonial {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* start testi */
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f3ff;
+  border-radius: 8px;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: left;
+}
+
+#card {
+  display: flex;
+}
+
+.picture {
+  width: 30%;
+}
+
+.text-testi {
+  width: 70%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+}
+/* end testi */
+
+.bannerr {
+  width: 80%;
+  height: 326px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d28a6;
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+  border-radius: 13px;
+}
+
+.faq {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.title-faq {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.list-faq {
+  width: 50%;
+}
+
+.accordion {
+  width: 80%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin-top: 100px;
+  width: 80%;
+}
+
+.naf {
+  font-weight: bold;
+}
+
+.search {
+  z-index: 10;
+  width: 70%;
+  top: 65%;
+  margin: 0 0 0 15%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+#cars-container {
+  width: 70%;
+  margin: 0 0 0 15%;
+}
+
+.detail {
+  display: flex;
+}
+
+@media (max-width: 884px) {
+  .navigation {
+    padding-left: 10px;
+    padding-right: unset;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    background-color: white;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    justify-content: flex-start;
+  }
+
+  #BCR {
+    display: unset;
+    font-weight: bolder;
+  }
+
+  #bg-nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000099;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+
+  .btn-nav {
+    display: unset;
+    padding-right: 20px;
+  }
+
+  .btn-close-nav.active {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    right: 15px;
+    top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .section1 {
+    padding-left: 10px;
+    margin-top: 34px;
+  }
+
+  .desc-rental {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 10px;
+  }
+
+  .section2 {
+    width: unset;
+    padding-left: 10px;
+    margin-top: 30px;
+  }
+
+  .our-service {
+    flex-direction: column;
+    padding-left: unset;
+  }
+
+  .img-service {
+    width: unset;
+    scale: 0.8;
+    justify-content: center;
+    padding: unset;
+  }
+
+  .desc-service {
+    width: unset;
+    padding: 0 15px 0 10px;
+  }
+
+  ul {
+    padding: unset;
+  }
+
+  .why-us {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .row h2,
+  .row p {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-slider {
+    margin: 0 10px 0 10px;
+  }
+
+  .carousel {
+    scale: 1;
+  }
+
+  .testimonial {
+    width: 90%;
+  }
+
+  #card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mySlides {
+    padding: unset;
+  }
+
+  .picture {
+    padding: unset !important;
+  }
+
+  .text-testi span {
+    padding-left: 25%;
+  }
+
+  #profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-body span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .faq {
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+  }
+
+  .title-faq {
+    width: unset;
+  }
+
+  .list-faq {
+    width: unset;
+  }
+
+  .accordion {
+    width: unset;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px 0 10px;
+  }
+}
