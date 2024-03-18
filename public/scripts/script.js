@@ -99,6 +99,6 @@ function redirectToHome() {
 }
 
 function redirectToCars() {
-  window.location.href = "/cars";
+  window.location.href = "/cars.html";
 }
 // end
