@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const carsController = require("../controller/cars");
 
+// router.get("/", carsController.indexCars);
 router.get("/", carsController.getCars);
 router.post("/", carsController.addCars);
 router.get("/:id", carsController.getCar);

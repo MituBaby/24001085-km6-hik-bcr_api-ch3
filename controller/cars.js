@@ -1,4 +1,10 @@
+const { json } = require("express");
 const carsUsecase = require("../usecase/cars");
+const path = require("path");
+
+// exports.indexCars = (req, res) => {
+//   res.sendFile(path.join(__dirname, "../public/cariMobil.html"));
+// };
 
 exports.getCars = (req, res) => {
   const { manufacture } = req.query;
@@ -8,7 +14,9 @@ exports.getCars = (req, res) => {
     data,
     message: `Car with manufacture ${manufacture} is found!`,
   };
+  // console.log(data);
 
+  res.sendFile(path.join(__dirname, "../public/cars.html"));
   res.status(200).json(response);
 };
 
