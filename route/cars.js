@@ -3,10 +3,11 @@ const router = express.Router();
 const carsController = require("../controller/cars");
 
 // router.get("/", carsController.indexCars);
-router.get("/", carsController.getCars);
-router.post("/", carsController.addCars);
-router.get("/:id", carsController.getCar);
-router.put("/:id", carsController.updateCars);
-router.delete("/:id", carsController.deleteCars);
+router.route("/").get(carsController.getCars).post(carsController.addCars);
+router
+  .route("/:id")
+  .get(carsController.getCar)
+  .put(carsController.updateCars)
+  .delete(carsController.deleteCars);
 
 module.exports = router;

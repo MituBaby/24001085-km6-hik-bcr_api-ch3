@@ -20,13 +20,13 @@ exports.getCars = (req, res) => {
   res.status(200).json(response);
 };
 
-exports.getCar = (req, res) => {
+exports.getCar = (req, res, next) => {
   const { id } = req.params;
 
   const data = carsUsecase.getCar(id);
   if (!data) {
-    return res.status(404).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: `Car with id ${id} is not found!`,
     });
   }
@@ -39,7 +39,7 @@ exports.getCar = (req, res) => {
   res.status(200).json(response);
 };
 
-exports.addCars = (req, res) => {
+exports.addCars = (req, res, next) => {
   const {
     plate,
     manufacture,
@@ -58,86 +58,86 @@ exports.addCars = (req, res) => {
   } = req.body;
 
   if (!plate || plate == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Plate must be filled",
     });
   }
   if (!manufacture || manufacture == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Manufacture must be filled",
     });
   }
   if (!model || model == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Model must be filled",
     });
   }
   if (!image || image == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Image must be filled",
     });
   }
   if (!rentPerDay) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Rent Per Day must be filled",
     });
   }
   if (!capacity) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Capacity must be filled",
     });
   }
   if (!description || description == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Description must be filled",
     });
   }
   if (!availableAt || availableAt == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Available At must be filled",
     });
   }
   if (!transmission || transmission == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Transmission must be filled",
     });
   }
   if (!available || available == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Available must be filled",
     });
   }
   if (!type || type == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Type must be filled",
     });
   }
   if (!year) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Year must be filled",
     });
   }
   if (!options || options == "" || options == []) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Options must be filled",
     });
   }
   if (!specs || specs == "" || specs == []) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Specs must be filled",
     });
   }
@@ -149,7 +149,7 @@ exports.addCars = (req, res) => {
   });
 };
 
-exports.updateCars = (req, res) => {
+exports.updateCars = (req, res, next) => {
   const { id } = req?.params;
   const {
     plate,
@@ -169,86 +169,86 @@ exports.updateCars = (req, res) => {
   } = req.body;
 
   if (!plate || plate == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Plate must be filled",
     });
   }
   if (!manufacture || manufacture == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Manufacture must be filled",
     });
   }
   if (!model || model == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Model must be filled",
     });
   }
   if (!image || image == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Image must be filled",
     });
   }
   if (!rentPerDay) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Rent Per Day must be filled",
     });
   }
   if (!capacity) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Capacity must be filled",
     });
   }
   if (!description || description == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Description must be filled",
     });
   }
   if (!availableAt || availableAt == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Available At must be filled",
     });
   }
   if (!transmission || transmission == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Transmission must be filled",
     });
   }
   if (!available || available == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Available must be filled",
     });
   }
   if (!type || type == "") {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Type must be filled",
     });
   }
   if (!year) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Year must be filled",
     });
   }
   if (!options || options == "" || options == []) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Options must be filled",
     });
   }
   if (!specs || specs == "" || specs == []) {
-    return res.status(400).json({
-      data: null,
+    return next({
+      statusCode: 404,
       message: "Specs must be filled",
     });
   }
